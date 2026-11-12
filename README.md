@@ -37,7 +37,7 @@
 
 ```bash
 git clone <url-репозитория>
-cd shell-emulator
+cd shell-emulator-var12
 
 # Интерактивный режим (VFS по умолчанию)
 python3 src/emulator.py

@@ -98,7 +98,8 @@ class VirtualFileSystem:
             try:
                 entries = sorted(current_dir.iterdir(), key=lambda p: p.name)
             except PermissionError as exc:
-                raise PermissionError(f"Cannot read directory: {current_dir}") from exc
+                msg = f"Cannot read directory: {current_dir}"
+                raise PermissionError(msg) from exc
 
             for entry in entries:
                 if entry.name.startswith("."):
@@ -112,7 +113,11 @@ class VirtualFileSystem:
                         content = entry.read_bytes()
                     except (OSError, PermissionError):
                         content = b""
-                    node = VFSNode(name=entry.name, is_dir=False, content=content)
+                    node = VFSNode(
+                        name=entry.name,
+                        is_dir=False,
+                        content=content,
+                    )
                     parent_node.add_child(node)
 
         walk(src, self.root)
@@ -244,9 +249,11 @@ class VirtualFileSystem:
             parent = self.resolve(dst_parent_path)
 
         if parent is None:
-            raise FileNotFoundError(f"No such file or directory: {dst_parent_path}")
+            msg = f"No such file or directory: {dst_parent_path}"
+            raise FileNotFoundError(msg)
         if not parent.is_dir:
-            raise NotADirectoryError(f"Not a directory: {dst_parent_path}")
+            msg = f"Not a directory: {dst_parent_path}"
+            raise NotADirectoryError(msg)
 
         # Если целевой путь существует и это директория — копируем внутрь
         existing = parent.get_child(dst_name)

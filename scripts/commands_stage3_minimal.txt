@@ -1,0 +1,6 @@
+# Тест minimal VFS
+vfs-info
+pwd
+ls
+cd /
+ls

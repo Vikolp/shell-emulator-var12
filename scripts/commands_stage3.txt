@@ -1,0 +1,20 @@
+# Стартовый скрипт Этапа 3 (VFS)
+# Тестирование загрузки VFS, vfs-info и базовых команд
+
+vfs-info
+pwd
+ls
+cd home
+pwd
+ls
+cd user
+pwd
+ls
+cd documents
+pwd
+ls
+cd /
+pwd
+ls
+# Ошибка — несуществующий путь
+cd /nonexistent

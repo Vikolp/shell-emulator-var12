@@ -1,0 +1,36 @@
+# Стартовый скрипт Этапа 5
+# Дополнительные команды: cp, mkdir
+
+vfs-info
+pwd
+ls
+
+# Создание директорий
+mkdir testdir
+ls
+cd testdir
+pwd
+mkdir nested
+ls
+cd ..
+
+# Копирование
+cp home/user/documents/readme.txt copy_of_readme.txt
+ls
+cp home copy_of_home
+ls
+cd copy_of_home
+pwd
+ls
+cd user/documents
+ls
+cd /
+
+# Ошибки
+mkdir
+mkdir already_exists_but_wait
+mkdir testdir
+cp
+cp no_such_file dest
+cp home/user/documents/readme.txt testdir
+ls testdir

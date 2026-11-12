@@ -1,0 +1,23 @@
+# Стартовый скрипт Этапа 4
+# Основные команды: ls, cd, date, pwd, cal
+
+vfs-info
+pwd
+ls
+date
+cal
+cal 11
+cal 11 2026
+cd home
+pwd
+ls
+cd user/documents
+pwd
+ls
+cd /
+pwd
+# Ошибки
+cd /no/such/dir
+ls /no/such/dir
+cal 13
+date extra_arg

@@ -1,0 +1,10 @@
+# Стартовый скрипт Этапа 1
+# Проверка заглушек и обработки ошибок
+
+ls
+ls -la
+cd /tmp
+cd
+unknown_command
+ls arg1 arg2
+exit

@@ -1,0 +1,10 @@
+# Тест multi VFS
+vfs-info
+pwd
+ls
+cd subdir
+pwd
+ls
+cd ..
+pwd
+ls

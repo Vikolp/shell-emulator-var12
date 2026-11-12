@@ -1,0 +1,13 @@
+# Тест deep VFS (≥3 levels)
+vfs-info
+pwd
+ls
+cd level1
+pwd
+ls
+cd level2
+pwd
+ls
+cd ../..
+pwd
+ls
